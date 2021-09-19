@@ -88,44 +88,6 @@ To connect to the web socket you could do something as simple as this:
   }
 ```
 
-### Crypto Assets 
-
-```json
-[
-    {
-        "asset_id": "BTC",
-        "url": "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/4caf2b16a0174e26a3482cea69c34cba.png"
-    },
-    {
-        "asset_id": "USD",
-        "url": "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/0a4185f21a034a7cb866ba7076d8c73b.png"
-    },
-    {
-        "asset_id": "PLN",
-        "url": "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/3f682b5b77ec4d8cb612b8ff3ac748f7.png"
-    },
-]
-```
-
-```dart
-Future<List<CryptoIcon>> getCryptoAssets() async {
-    final result = await dioClient.get<List<dynamic>>(
-        'https://rest.coinapi.io/v1/assets/icons/100',
-        options: Options(
-        headers: <String, String>{
-            'X-CoinAPI-Key': '{{API_KEY}}'
-        },
-        ),
-    );
-
-    return result.data!
-        .map((dynamic e) => CryptoIcon.fromJson(e as Map<String, dynamic>))
-        .toList();
-}
-```
-
-
-
 This will return a web socket that is constantly being udated with json objects for (BTC, ETH, ADA) in this format:
 
 ```json
@@ -173,7 +135,42 @@ This will return a web socket that is constantly being udated with json objects 
 
 
 
-## Technical Requirements
+### Crypto Assets 
+
+```json
+/// Crypto assets json response
+[
+    {
+        "asset_id": "BTC",
+        "url": "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/4caf2b16a0174e26a3482cea69c34cba.png"
+    },
+    {
+        "asset_id": "USD",
+        "url": "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/0a4185f21a034a7cb866ba7076d8c73b.png"
+    },
+    {
+        "asset_id": "PLN",
+        "url": "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/3f682b5b77ec4d8cb612b8ff3ac748f7.png"
+    },
+]
+```
+
+```dart
+Future<List<CryptoAsset>> getCryptoAssets() async {
+    final result = await dioClient.get<List<dynamic>>(
+        'https://rest.coinapi.io/v1/assets/icons/100',
+        options: Options(
+        headers: <String, String>{
+            'X-CoinAPI-Key': '{{API_KEY}}'
+        },
+        ),
+    );
+
+    return result.data!
+        .map((dynamic e) => CryptoAsset.fromJson(e as Map<String, dynamic>))
+        .toList();
+}
+```
 
 ### State Management
 
@@ -181,8 +178,7 @@ Please restrict your usage of state or dependency injection to the following opt
 
 1. [bloc](https://pub.dev/packages/bloc/versions/7.2.0-dev.3)
 2. [riverpod](https://pub.dev/packages/riverpod/versions/1.0.0-dev.7)
-3. [provider](https://pub.dev/packages/provider)
-4. [riverbloc](https://pub.dev/packages/riverbloc/versions/1.0.0-dev.1)
+3. [riverbloc](https://pub.dev/packages/riverbloc/versions/1.0.0-dev.1)
 
 We ask this because this challenge values consistency and efficiency over ingenuity. Using commonly used libraries ensures that we can review your code in a timely manner and allows us to provide better feedback.
 
@@ -218,6 +214,10 @@ While the purpose of this challenge is not to guage whether you can achieve 100%
 ## Bonus Requirements
 
 If you are feeling up to it and want to add some more functionality to the application try some of these bonus items:
+
+1. Animations
+2. More coins for **Live prices**
+3. Any other section/page using another rest api endpoint from the [CoinAPI](https://docs.coinapi.io/#md-docs).
 
 
 ## Q&A
