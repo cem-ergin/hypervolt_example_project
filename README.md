@@ -19,6 +19,10 @@ We use differente projects versions depending on what we want to achieve. We sta
 - Crypto Assets
     - List of cryptocurrencies and their logos.
 
+> All assets and fonts are already included int the `assets/` directory. 
+>
+> Remeber to read the `README.md` file inside the `app/` directory. This contains instructions on how to use the assets.
+
 **Other**
 
 - Clear and logical commit messages.
@@ -26,12 +30,12 @@ We use differente projects versions depending on what we want to achieve. We sta
 
 
 
-## Test Coverage
+## Testing
 
 To demonstrate your experience writing different types of tests in Flutter please do the following:
 
-- Choose ONE of your state handlers and do a unit test for it.
-- Choose ONE widget and do a unit test for it.
+- Choose ONE of your state handlers and create a unit test for it.
+- Choose ONE widget and create a unit test for it.
 
 Feel free to add more tests as you see fit but the above is the minimum requirement.
 
