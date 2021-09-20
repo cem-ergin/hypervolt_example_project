@@ -4,28 +4,49 @@ Be sure to read **all** of this document carefully, and follow the guidelines wi
 
 ## Flutter Version
 
-We use differente projects versions depending on what we want to achieve. We stay between stable and beta. Please user a flutter version greater than or equal to `2.5.1` for the challenge. User dart `2.13.0` or greater.
+We use differente projects versions depending on what we want to achieve. We stay between stable and beta. Please use a flutter version greater than or equal to `2.5.1` for the challenge. User dart `2.13.0` or greater.
 
 ## Requirements
 
 ### App Structure
 
+- AppBar
+    - Welcome message and name
+    - Profile image
+- Balance card
+- Live prices
+    - Live prices for Bitcoin, Etherium and Cardano
+- Crypto Assets
+    - List of cryptocurrencies and their logos.
 
-## Test Coverage
+> All assets and fonts are already included int the `assets/` directory. 
+>
+> Remeber to read the `README.md` file inside the `app/` directory. This contains instructions on how to use the assets.
+
+**Other**
+
+- Clear and logical commit messages.
+- Clear documentation on the architecture of your application. 
+
+
+
+## Testing
 
 To demonstrate your experience writing different types of tests in Flutter please do the following:
 
-- Choose ONE class and achieve 100% test coverage.
-- Choose ONE page and achieve 100% test coverage.
+- Choose ONE of your state handlers and create a unit test for it.
+- Choose ONE widget and create a unit test for it.
 
 Feel free to add more tests as you see fit but the above is the minimum requirement.
 
 ## Design
-This is the design for this code challenge. Feel free to change the name in the top to yours. The **balance blue card** is a dummy component with no state. 
+This is the design for this code challenge. Feel free to change the name in the top to yours.
+
+The **balance blue card** is a dummy component with no state. 
 
 The **Live Prices** section shows the current live prices for 3 cryptocurrencies Bitcoin, Etherium and Cardano. The real time data is comming via a web socket described in the next section. 
 
-Finally the **Crypto Assets** section displays a list of all the crypto assets names and images. 
+Finally, the **Crypto Assets** section displays a list of all the crypto assets names and images. 
 
 Please see the gif for a quick demo.
 
@@ -217,6 +238,7 @@ If you are feeling up to it and want to add some more functionality to the appli
 
 
 ## Q&A
+This code challenge should not take more than 4-5 hrs to be completed.
 
 > Where should I send back the result when I'm done?
 
