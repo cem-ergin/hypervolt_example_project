@@ -1,9 +1,11 @@
 import 'package:crypto_stats/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
-///CryptoStatsPage
+/// {@template crypto_stats_page}
+///  Page that hanldes the user interface for crypto stats feature.
+/// {@endtemplate}
 class CryptoStatsPage extends StatelessWidget {
-  ///CryptoStatsPage constructor
+  /// {@macro crypto_stats_page}
   const CryptoStatsPage({Key? key}) : super(key: key);
 
   @override
