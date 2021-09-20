@@ -4,7 +4,7 @@ Be sure to read **all** of this document carefully, and follow the guidelines wi
 
 ## Flutter Version
 
-We use differente projects versions depending on what we want to achieve. We stay between stable and beta. Please use a flutter version greater than or equal to `2.5.1` for the challenge. User dart `2.13.0` or greater.
+We use differente projects versions depending on what we want to achieve. We stay between stable and beta. Use a flutter version `>= 2.2.3` for the challenge. Use dart `>= 2.13.0`.
 
 ## Requirements
 
