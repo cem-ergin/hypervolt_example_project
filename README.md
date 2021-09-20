@@ -131,10 +131,6 @@ This will return a web socket that is constantly being udated with json objects 
 }
 ```
 
-### Web Socket Connection
-
-
-
 ### Crypto Assets 
 
 ```json
