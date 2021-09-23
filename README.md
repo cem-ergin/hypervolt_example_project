@@ -13,25 +13,27 @@ My whole home or main pages looks like this. I use ui folder as a view holder.
 
 ## Used Packages
 
-  animate_do: ^2.0.0  => This is for animating "Crypto assets" section
-  cached_network_image: ^3.1.0 => This is for caching network images. This is useful for "Crypto assets" and "Live prices" sections. Also I use AutomaticKeepAliveClientMixin on "Crypto assets" section. Because Flutter ListView creating list items every time again. AutomaticKeepAliveClientMixin stops that.
-  cupertino_icons: ^1.0.2
-  equatable: ^2.0.3 => This is for compare models. It is amazingly useful on bloc. You can emit without changing any state with Equatable classes. UI will automatically setting state.
-  flutter:
-    sdk: flutter
-  flutter_bloc: ^7.3.0  => State Management for BLoC Forever :)
-  get_it: ^7.2.0 => This is for lazy registering classes. I use this for CryptoAssetRepository
-  http: ^0.13.3 => I can also use dio but I use http for this project.
+  animate_do: ^2.0.0  => This is for animating "Crypto assets" section<br/> 
+  cached_network_image: ^3.1.0 => This is for caching network images. This is useful for "Crypto assets" and "Live prices" sections. Also I use AutomaticKeepAliveClientMixin on "Crypto assets" section. Because Flutter ListView creating list items every time again. AutomaticKeepAliveClientMixin stops that.<br/>
+  cupertino_icons: ^1.0.2<br/>
+  equatable: ^2.0.3 => This is for compare models. It is amazingly useful on bloc. You can emit without changing any state with Equatable classes. UI will automatically setting state.<br/>
+  flutter:<br/>
+    sdk: flutter<br/>
+  flutter_bloc: ^7.3.0  => State Management for BLoC Forever :)<br/>
+  get_it: ^7.2.0 => This is for lazy registering classes. I use this for CryptoAssetRepository<br/>  
+  http: ^0.13.3 => I can also use dio but I use http for this project.<br/>
   
   ## Some Screenshots and Gifs
  
 ![alt text](https://i.ibb.co/fqBZn8V/Screen-Shot-2021-09-23-at-14-52-29.png)
 ![alt text](https://i.ibb.co/0nJ6NFN/Screen-Shot-2021-09-23-at-14-52-48.png)
-![alt text](https://im2.ezgif.com/tmp/ezgif-2-4f7af04d268f.gif)
+![alt text](https://i.ibb.co/DVC4zNp/4c7a5cd947471e3c8b4646baa773fb22c04044ec.gif)
 
   ## Note About Live Prices Section
   
   I am not using assets file for coin images. I am getting them from rest coin api.
+  You can change below "subscribe_filter_symbol_id" codes and you can see whatever coin you want with its image. It is dynamic!
+
    ```
    socket.add(
       json.encode({
@@ -54,5 +56,4 @@ My whole home or main pages looks like this. I use ui folder as a view holder.
       }),
     );
     ```
-    You can change below "subscribe_filter_symbol_id" codes and you can see whatever coin you want with its image. It is dynamic!
 
